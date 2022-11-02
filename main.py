@@ -133,7 +133,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://mighty-reef-69383.herokuapp.com/' + Token)
+    bot.set_webhook(url='https://zargari-bot.herokuapp.com/' + Token)
     return "!", 200
 
 
