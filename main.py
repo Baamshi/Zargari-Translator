@@ -105,7 +105,7 @@ def about(message):
 def echo_message(update, message):
     text = str(update.message.text).lower()
     response = vow(text)
-    bot.reply_to(message, update.message.reply_text(response))
+    bot.reply_to(message, update.message.reply_text(response).text)
 
 
 """    text_in = str(update.message.text).lower()
