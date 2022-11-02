@@ -100,7 +100,7 @@ def about(message):
 
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
-def echo_message(message, update):
+def echo_message(message, update, context):
     text_in = str(update.message.text).lower()
     response = vow(text_in)
     bot.reply_to(message, message.text + f" = {response}")
@@ -115,8 +115,6 @@ def main():
     updater = Updater(Token, use_context=True)  
 
     dp = updater.dispatcher
-
-    dp.add_handler(MessageHandler(Filters.text, echo_message))
 
     dp.add_error_handler(error)
 
