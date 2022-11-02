@@ -7,6 +7,8 @@ import telebot
 Token = "5527319081:AAEa0iA0OFICPdxHwOWXmq4FctZ7VwL9Bss"
 bot = telebot.TeleBot(Token)
 server = Flask(__name__)
+updater = Updater(Token, use_context=True)  
+dp = updater.dispatcher
 
 
 def vow(input_text):
@@ -107,20 +109,6 @@ def echo_message(message, update, context):
 
 
 
-def error(update, context): 
-    print(f"Update {update} caused error {context.error}")
-    
-
-def main():
-    updater = Updater(Token, use_context=True)  
-
-    dp = updater.dispatcher
-
-    dp.add_error_handler(error)
-
-
-
-
 @server.route("/" + Token, methods=["POST"])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
@@ -136,4 +124,3 @@ def webhook():
 
 if __name__ == "__main__":
     server.run(host:="0.0.0.0", port:=int(os.environ.get('PORT', 5000)))
-    main()
