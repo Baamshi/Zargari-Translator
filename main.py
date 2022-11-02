@@ -105,8 +105,7 @@ def about(message):
 def echo_message(message,update, context):
     text = str(update.message.text).lower()
     response = vow(text)
-    update.message.reply_text(response)
-    
+    bot.reply_to(message, update.message.reply_text(response))
 
 
 
