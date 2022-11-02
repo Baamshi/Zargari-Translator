@@ -99,11 +99,11 @@ def about(message):
 * The future is encrypted ;)'''+ message.from_user.first_name)
 
 
-
-def handle_message(update, context):
+@bot.message_handler(func=lambda message: True, content_types=['text'])
+def echo_message(message, update):
+    bot.reply_to(message, vow(message)+ message.text)
     text = str(update.message.text).lower()
     response = vow(text)
-    
     update.message.reply_text(response)
 
 
@@ -115,11 +115,8 @@ def main():
     updater = Updater(Token, use_context=True)  
 
     dp = updater.dispatcher
-                                
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("about", about))
 
-    dp.add_handler(MessageHandler(Filters.text, handle_message))
+    dp.add_handler(MessageHandler(Filters.text, echo_message))
 
     dp.add_error_handler(error)
 
