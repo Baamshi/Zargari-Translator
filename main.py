@@ -79,7 +79,7 @@ def vow(input_text):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, 'Please Enter your Phrase: ' + message.from_user.first_name)
+    bot.reply_to(message, 'Please Enter your Phrase: ' )
     
 
 @bot.message_handler(commands=['about'])
@@ -96,12 +96,14 @@ def about(message):
 + You can join me to revive this language and spread it all over the world.
 
 
-* The future is encrypted ;)'''+ message.from_user.first_name)
+* The future is encrypted ;)''')
 
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
-def echo_message(message):
-    bot.reply_to(message, message.text)
+def echo_message(message, update):
+    text_in = str(update.message.text).lowe()
+    response = vow(text_in)
+    bot.reply_to(message, response.text)
 
 
 
