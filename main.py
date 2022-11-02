@@ -101,7 +101,7 @@ def about(message):
 * The future is encrypted ;)''')
 
 
-@bot.message_handler()
+@bot.message_handler(content_type="text")
 def echo_message(update, context):
     text = str(update.message.text).lower()
     response = vow(text)
