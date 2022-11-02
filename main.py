@@ -105,11 +105,9 @@ def about(message):
 def echo_message(update, message):
     text = str(update.message.text).lower()
     response = vow(text)
-    bot.reply_to(message, update.message.reply_text(response).text)
+    bot.reply_to(message, str(update.message.reply_text(response).text))
 
 
-"""    text_in = str(update.message.text).lower()
-    response = vow(text_in)"""
 
 @server.route("/" + Token, methods=["POST"])
 def getMessage():
