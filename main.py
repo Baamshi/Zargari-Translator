@@ -77,12 +77,14 @@ def vow(input_text):
     return translate
 
 
-def start_command(update, context):
-    update.message.reply_text('Please Enter your Phrase: ')
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, 'Please Enter your Phrase: ' + message.from_user.first_name)
     
 
-def about_command(update, context): 
-    update.message.reply_text('''- WHAT is Zargari language?
+@bot.message_handler(commands=['about'])
+def about(message): 
+    bot.reply_to(message,'''- WHAT is Zargari language?
 + Zargari language is an encoding based on language rules for secret communication between two or more people.
 
 - WHERE and WHY?
@@ -94,7 +96,7 @@ def about_command(update, context):
 + You can join me to revive this language and spread it all over the world.
 
 
-* The future is encrypted ;)''')
+* The future is encrypted ;)'''+ message.from_user.first_name)
 
 
 
@@ -109,17 +111,17 @@ def error(update, context):
     print(f"Update {update} caused error {context.error}")
     
 
+def main():
+    updater = Updater(Token, use_context=True)  
 
-updater = Updater(Token, use_context=True)  
+    dp = updater.dispatcher
+                                
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("about", about))
 
-dp = updater.dispatcher
-                            
-dp.add_handler(CommandHandler("start", start_command))
-dp.add_handler(CommandHandler("about", about_command))
+    dp.add_handler(MessageHandler(Filters.text, handle_message))
 
-dp.add_handler(MessageHandler(Filters.text, handle_message))
-
-dp.add_error_handler(error)
+    dp.add_error_handler(error)
 
 
 
@@ -139,3 +141,4 @@ def webhook():
 
 if __name__ == "__main__":
     server.run(host:="0.0.0.0", port:=int(os.environ.get('PORT', 5000)))
+    main()
