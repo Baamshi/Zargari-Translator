@@ -103,7 +103,7 @@ def about(message):
 def echo_message(message, update):
     text_in = str(update.message.text).lower()
     response = vow(text_in)
-    bot.reply_to(message, response.text)
+    bot.reply_to(message, message.text + f" = {response}")
 
 
 
