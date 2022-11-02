@@ -102,12 +102,12 @@ def about(message):
 
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
-def echo_message(message, update, context):
-    text_in = str(update.message.text).lower()
-    response = vow(text_in)
-    bot.reply_to(message, message.text + f" = {response}")
+def echo_message(message):
+    bot.reply_to(message, message.text)
 
 
+"""    text_in = str(update.message.text).lower()
+    response = vow(text_in)"""
 
 @server.route("/" + Token, methods=["POST"])
 def getMessage():
