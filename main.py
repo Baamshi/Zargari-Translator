@@ -102,10 +102,10 @@ def about(message):
 
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
-def echo_message(update, message):
+def echo_message(update, context):
     text = str(update.message.text).lower()
     response = vow(text)
-    bot.reply_to(message, str(update.message.reply_text(response).text))
+    update.message.reply_text(response)
 
 
 
