@@ -1,12 +1,30 @@
 body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #031321;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    margin-top: 20%;
+    position: relative;
+    width: 1200px;
+    height: 720px;
+}
+
+.box{
+    position: relative;
+    width: 370px;
+    height: 270px;
+    background-color: #004a68;
+    float: center;
+    margin: 0 15px;
+    border-radius: 10px;
 }
 a{
     position: relative;
