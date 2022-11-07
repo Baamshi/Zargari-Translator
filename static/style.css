@@ -12,15 +12,15 @@ body{
 
 .container{
     margin-top: 20%;
-    position: relative;
+    position: absolute;
     width: 1200px;
     height: 720px;
 }
 
 .box{
-    position: relative;
-    width: 370px;
-    height: 270px;
+    position: absolute;
+    width: 400px;
+    height: 400px;
     background-color: #004a68;
     float: center;
     margin: 0 15px;
