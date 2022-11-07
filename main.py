@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request
+from flask import Flask, request, render_template
 from telegram.ext import *
 import telebot
 
@@ -110,14 +110,14 @@ def echo_message(message):
 @server.route("/" + Token, methods=["POST"])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
-    return "!", 200
+    return render_template("index.html"), 200
 
 
 @server.route("/")
 def webhook():
     bot.remove_webhook()
     bot.set_webhook(url='https://zargari-bot.herokuapp.com/' + Token)
-    return "!", 200
+    return render_template("index.html"), 200
 
 
 if __name__ == "__main__":
