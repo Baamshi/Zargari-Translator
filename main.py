@@ -1,14 +1,11 @@
 import os
 from flask import Flask, request, render_template
-from telegram.ext import *
 import telebot
 
 
 Token = "5527319081:AAEa0iA0OFICPdxHwOWXmq4FctZ7VwL9Bss"
 bot = telebot.TeleBot(Token)
 server = Flask(__name__)
-updater = Updater(Token, use_context=True)  
-dp = updater.dispatcher
 
 
 def vow(input_text):
@@ -97,14 +94,12 @@ def about(message):
 + In this project, I try to create an advanced structure so that Latin languages can also be converted into the Zargari language.
 + You can join me to revive this language and spread it all over the world.
 
-
 * The future is encrypted ;)''')
 
 
 @bot.message_handler(func=lambda message:True, content_types=["text"])
 def echo_message(message):
     bot.reply_to(message, vow(message.text))
-
 
 
 @server.route("/" + Token, methods=["POST"])
