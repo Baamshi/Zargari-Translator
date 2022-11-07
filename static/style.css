@@ -11,7 +11,7 @@ body{
 }
 
 .container{
-    margin-top: 50%;
+    margin-top: 30%;
     position: absolute;
     width: 1200px;
     height: 720px;
@@ -19,16 +19,16 @@ body{
 
 .box{
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 370px;
+    height: 370px;
     background-color: #004a68;
     float: center;
     margin: 0 250px;
-    border-radius: 50px;
+    border-radius: 25px;
 }
 a{
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    display: flex;
     padding: 15px 30px;
     color: #2196f3;
     text-transform: uppercase;
