@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    margin-top: 25%;
+    margin-top: 20%;
     position: absolute;
     width: 1200px;
     height: 720px;
@@ -20,9 +20,9 @@ body{
     position: absolute;
     width: 370px;
     height: 370px;
-    background-color: #000d36;
+    background-color: #013747;
     float: center;
-    margin: 0 385px;
+    margin: 0 370px;
     border-radius: 50px;
 }
 a{
