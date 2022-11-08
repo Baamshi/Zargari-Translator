@@ -10,8 +10,8 @@ body{
 }
 
 .container{
-    margin-top: 50%;
-    position: absolute;
+    margin-top: 65%;
+    position: relative;
     width: 848px;
     height: 480px;
 }
@@ -22,7 +22,7 @@ body{
     height: 370px;
     background-color: #3d3d3d;
     float: center;
-    margin: 0 300px;
+    margin: 0 330px;
     border-radius: 50px;
 }
 
@@ -31,11 +31,6 @@ img.displayed {
     margin-left: auto;
     margin-right: auto }
 
-a.blocktext {
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto 
-}
 
 a{
     position: relative;
