@@ -33,7 +33,7 @@ img.displayed {
 
 
 a{
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     padding: 15px 30px;
