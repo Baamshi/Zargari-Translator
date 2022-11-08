@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px;
+    min-height: 250px;
     background: #031321;
     font-family: 'Times New Roman', Times, serif;
 }
