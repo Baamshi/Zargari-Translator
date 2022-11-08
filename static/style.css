@@ -12,8 +12,8 @@ body{
 .container{
     margin-top: 65%;
     position: absolute;
-    width: 1920px;
-    height: 1280px;
+    width: 1280px;
+    height: 720px;
 }
 
 .box{
