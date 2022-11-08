@@ -12,7 +12,7 @@ body{
 .container{
     margin-top: 50%;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 25%;
 }
 
 .box{
@@ -21,8 +21,8 @@ body{
     height: 370px;
     background-color: #3d3d3d;
     float: center;
-    margin-top: 50%;
-    margin-left: 50%;
+    margin-top: 25%;
+    margin-left: 25%;
     border-radius: 50px;
 }
 
