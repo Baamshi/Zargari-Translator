@@ -37,7 +37,7 @@ a.blocktext {
 }
 
 a{
-    position: absolute;
+    position: relative;
     display: block;
     padding: 15px 30px;
     color: #2196f3;
