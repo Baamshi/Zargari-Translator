@@ -31,14 +31,14 @@ img.displayed {
     margin-left: auto;
     margin-right: auto }
 
-a.displayed {
-    display: block;
+a.blocktext {
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto 
+}
 
 a{
     position: absolute;
-    display: flex;
+    display: block;
     padding: 15px 30px;
     color: #2196f3;
     text-transform: uppercase;
