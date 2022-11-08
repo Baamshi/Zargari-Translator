@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    margin-top: auto;
+    margin-top: 25%;
     position: absolute;
 }
 
@@ -41,8 +41,6 @@ a{
     text-decoration: none;
     font-size: 24px;
     float: center;
-    margin-top: auto;
-    margin-left: auto;
     overflow: hidden;
     transition: 0.2s;
 }
