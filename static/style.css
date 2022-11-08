@@ -38,8 +38,8 @@ a.blocktext {
 
 a{
     position: relative;
-    display: block;
-    padding: 30px 30px;
+    display: flex;
+    padding: 15px 30px;
     color: #2196f3;
     text-transform: uppercase;
     letter-spacing: 4px;
