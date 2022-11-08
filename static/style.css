@@ -26,7 +26,7 @@ body{
     margin: 0 360px;
     border-radius: 50px;
 }
-a{
+.content{
     position: absolute;
     display: flex;
     padding: 15px 30px;
