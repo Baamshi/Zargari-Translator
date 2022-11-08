@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     background: #031321;
@@ -22,7 +22,6 @@ body{
     height: 370px;
     background-color: #3d3d3d;
     float: center;
-    margin: 0 360px;
     border-radius: 50px;
 }
 
