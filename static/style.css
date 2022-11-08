@@ -11,7 +11,7 @@ body{
 
 .container{
     margin-top: 50%;
-    position: relative;
+    position: absolute;
 }
 
 .box{
