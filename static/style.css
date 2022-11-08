@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100px;
     background: #031321;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -21,7 +21,7 @@ body{
     position: absolute;
     width: 370px;
     height: 370px;
-    background-color: #004a68;
+    background-color: #03323d;
     float: center;
     margin: 0 360px;
     border-radius: 50px;
@@ -38,65 +38,65 @@ a{
     overflow: hidden;
     transition: 0.2s;
 }
-.content:hover{
+a:hover{
     color: #255784;
     background: #2196f3;
     box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
     transition-delay: 1s;
 }
-.content span{
+a span{
     position: absolute;
     display: flex;
 }
-.content span:nth-child(1){
+a span:nth-child(1){
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg,transparent,#2196f3);
 }
-.content:hover span:nth-child(1)
+a:hover span:nth-child(1)
 {
     left: 100%;
     transition: 1s;
 
 }
-.content span:nth-child(3){
+a span:nth-child(3){
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
     background: linear-gradient(270deg,transparent,#2196f3);
 }
-.content:hover span:nth-child(3)
+a:hover span:nth-child(3)
 {
     right: 100%;
     transition: 1s;
     transition-delay: 0.5s;
     
 }
-.content span:nth-child(2){
+a span:nth-child(2){
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg,transparent,#2196f3);
 }
-.content:hover span:nth-child(2)
+a:hover span:nth-child(2)
 {
     top: 100%;
     transition: 1s;
     transition-delay: 0.25s;
     
 }
-.content span:nth-child(4){
+a span:nth-child(4){
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(360deg,transparent,#2196f3);
 }
-.content:hover span:nth-child(4)
+a:hover span:nth-child(4)
 {
     bottom: 100%;
     transition: 1s;
