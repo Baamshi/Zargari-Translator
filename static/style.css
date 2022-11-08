@@ -32,13 +32,15 @@ img.displayed {
     margin-right: auto }
 
 a.blocktext {
+    align-items: center;
     margin-left: auto;
     margin-right: auto 
 }
 
 a{
-    position: relative;
+    position: absolute;
     display: flex;
+    align-items: center;
     padding: 15px 30px;
     color: #2196f3;
     text-transform: uppercase;
