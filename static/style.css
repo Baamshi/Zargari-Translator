@@ -12,8 +12,8 @@ body{
 .container{
     margin-top: 65%;
     position: absolute;
-    width: 1280px;
-    height: 720px;
+    width: 848px;
+    height: 480px;
 }
 
 .box{
@@ -22,6 +22,7 @@ body{
     height: 370px;
     background-color: #3d3d3d;
     float: center;
+    margin: 0 360px;
     border-radius: 50px;
 }
 
