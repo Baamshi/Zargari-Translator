@@ -22,7 +22,7 @@ body{
     height: 370px;
     background-color: #3d3d3d;
     float: center;
-    margin: 0 300px;
+    margin: 0 285px;
     border-radius: 50px;
 }
 
@@ -42,6 +42,7 @@ a{
     letter-spacing: 4px;
     text-decoration: none;
     font-size: 24px;
+    float: center;
     overflow: hidden;
     transition: 0.2s;
 }
